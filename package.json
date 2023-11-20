@@ -1,0 +1,24 @@
+{
+  "name": "20.11.2023",
+  "version": "1.0.0",
+  "description": "Nodejs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstack290623/20.11.2023.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstack290623/20.11.2023/issues"
+  },
+  "homepage": "https://github.com/fullstack290623/20.11.2023#readme",
+  "dependencies": {
+    "knex": "^3.0.1",
+    "sqlite3": "^5.1.6"
+  }
+}
