@@ -20,11 +20,11 @@ app.get('/api/employees', async (request, response) => {
 app.get('/api/employee/:id', (request, response) => {
     const user_id = parseInt(request.params.id)
     const user = crud.get_by_id(user_id)
-    if (user) { 
+    if (user) {
         response.json(user)
     }
     else {
-        response.status(404).json({ "error": `cannot find user with id ${user_id}`})
+        response.status(404).json({ "error": `cannot find user with id ${user_id}` })
     }
 })
 // POST
@@ -32,7 +32,7 @@ app.post('/api/employee', (request, response) => {
     const new_user = request.body
     const updated_user = crud.post(new_user)
     response.status(201).json(updated_user)
-    
+
 })
 // PUT
 app.put('/api/employee/:id', (request, response) => {
@@ -46,11 +46,11 @@ app.patch('/api/employee/:id', (request, response) => {
     const updated_user_req = request.body
     const user_id = parseInt(request.params.id)
     const updated_user = crud.patch(user_id, updated_user_req)
-    if (updated_user) { 
+    if (updated_user) {
         response.json(updated_user)
     }
     else {
-        response.status(404).json({ "error": `cannot find user with id ${user_id}`})
+        response.status(404).json({ "error": `cannot find user with id ${user_id}` })
     }
 })
 
@@ -58,11 +58,11 @@ app.patch('/api/employee/:id', (request, response) => {
 app.delete('/api/employee/:id', (request, response) => {
     const user_id = parseInt(request.params.id)
     const deleted = crud.delete_by_id(user_id)
-    if (deleted) { 
-        response.status(204).json({ "status": `user with id = ${user_id} deleted`})
+    if (deleted) {
+        response.status(204).json({ "status": `user with id = ${user_id} deleted` })
     }
     else {
-        response.status(404).json({ "error": `cannot find user with id ${user_id}`})
+        response.status(404).json({ "error": `cannot find user with id ${user_id}` })
     }
 })
 
@@ -72,7 +72,7 @@ app.listen(3000, () => {
 })
 
 
-async function go()  {
+async function go() {
     console.log(1);
     const employees = await dal.get_all()
     console.log(employees);
