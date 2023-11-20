@@ -22,6 +22,7 @@ async function get_by_id(id) {
 
 async function new_employee(new_emp) {
     // db.run('insert into company ....')
+    // result[0] will be the new ID given by the SQL
     const result = await connectedKnex('COMPANY').insert(new_emp)
     return { ...new_emp, ID: result[0] }
 }
